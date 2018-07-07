@@ -93,6 +93,7 @@ public class AppEmail
 		//SqlSession sqlSession = getSession();		
 		VariableInstanceLogExample filtro = new VariableInstanceLogExample();
 		filtro.createCriteria().andProcessidEqualTo(processId).andProcessinstanceidEqualTo(Long.valueOf(processInstanceId)).andVariableidEqualTo(variableId);
+		filtro.setOrderByClause("id desc");
 		List<VariableInstanceLog> lstVariables = sqlSession.getMapper(VariableInstanceLogMapper.class).selectByExample(filtro);
 		if (lstVariables!=null && lstVariables.size()>0) {
 			VariableInstanceLog vilog = lstVariables.get(0);
