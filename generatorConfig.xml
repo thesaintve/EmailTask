@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+<!--     <jdbcConnection connectionURL="jdbc:postgresql://192.168.1.113:5432/dbjbpm" driverClass="org.postgresql.Driver" password="pg123" userId="postgres" /> -->
+    <jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/dbjbpm" driverClass="org.postgresql.Driver" password="rootmaster" userId="postgres" />
+    
+<!--     <javaModelGenerator targetPackage="java.orm.model" targetProject="C:\Users\david\workspace\EmailTask\src\java" /> -->
+<!--     <sqlMapGenerator targetPackage="java.orm.map" targetProject="C:\Users\david\workspace\EmailTask\src\java" /> -->
+<!--     <javaClientGenerator targetPackage="java.orm.client" targetProject="C:\Users\david\workspace\EmailTask\src\java" type="XMLMAPPER" /> -->
+    
+    <javaModelGenerator targetPackage="valpoSystems.emailTask.orm.model" targetProject="EmailTask" />
+    <sqlMapGenerator targetPackage="valpoSystems.emailTask.orm.map" targetProject="EmailTask" />
+    <javaClientGenerator targetPackage="valpoSystems.emailTask.orm.client" targetProject="EmailTask" type="XMLMAPPER" />
+
+    <table schema="public" tableName="audittaskimpl" domainObjectName="AuditTaskImpl" />
+    <table schema="public" tableName="variableinstancelog" domainObjectName="VariableInstanceLog" />
+    
+<!--     <table schema="public" tableName="audittaskimpl"> -->
+<!--       <columnOverride column="???" property="???" /> -->
+<!--     </table> -->
+    
+  </context>
+</generatorConfiguration>
